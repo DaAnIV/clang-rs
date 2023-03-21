@@ -1,5 +1,4 @@
 extern crate clang;
-extern crate libc;
 
 use std::env;
 use std::fs;
@@ -12,7 +11,7 @@ use clang::*;
 use clang::completion::*;
 use clang::source::*;
 
-use libc::{c_int};
+use std::os::raw::{c_int};
 
 //================================================
 // Macros

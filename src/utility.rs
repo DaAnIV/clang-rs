@@ -17,7 +17,7 @@ use std::path::{Path, PathBuf};
 
 use clang_sys::*;
 
-use libc::{c_void};
+use std::os::raw::{c_void};
 
 //================================================
 // Macros

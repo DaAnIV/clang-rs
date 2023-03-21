@@ -23,7 +23,17 @@ use std::path::{Path, PathBuf};
 
 use clang_sys::*;
 
-use libc::{c_uint, time_t};
+use std::os::raw::c_uint;
+
+cfg_if::cfg_if! {
+    if #[cfg(all(target_family = "wasm", target_pointer_width = "32"))] {
+        pub type time_t = i32;
+    } else if #[cfg(all(target_family = "wasm", target_pointer_width = "64"))] {
+        pub type time_t = i64;
+    } else {
+        use libc::{time_t};
+    }
+}
 
 use utility::{self, Nullable};
 use super::{Entity, TranslationUnit};

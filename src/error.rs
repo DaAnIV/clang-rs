@@ -17,7 +17,7 @@ use std::fmt;
 
 use clang_sys::*;
 
-use libc::{c_longlong};
+use std::os::raw::{c_longlong};
 
 use utility::{FromError};
 

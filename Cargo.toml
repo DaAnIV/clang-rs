@@ -37,6 +37,7 @@ static = ["clang-sys/static"]
 
 clang-sys = "1"
 libc = "0.2.39"
+cfg-if = "1.0.0"
 
 [[test]]
 

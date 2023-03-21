@@ -47,7 +47,7 @@ use std::sync::atomic::{self, AtomicBool};
 
 use clang_sys::*;
 
-use libc::{c_int, c_uint, c_ulong};
+use std::os::raw::{c_int, c_uint, c_ulong};
 
 use completion::{Completer, CompletionString};
 use diagnostic::{Diagnostic};

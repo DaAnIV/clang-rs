@@ -24,7 +24,7 @@ use std::path::{PathBuf};
 
 use clang_sys::*;
 
-use libc::{c_uint};
+use std::os::raw::{c_uint};
 
 use utility;
 use super::{Availability, EntityKind, TranslationUnit, Unsaved, Usr};
